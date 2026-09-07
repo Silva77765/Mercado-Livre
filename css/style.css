@@ -10,7 +10,6 @@ body {
   color: #333;
 }
 
-/* Header */
 header {
   background-color: #ffe600;
   padding: 10px 5%;
@@ -82,7 +81,6 @@ header {
   vertical-align: top;
 }
 
-/* CEP Bar */
 .sub-header {
   max-width: 1200px;
   margin: 8px auto 0 auto;
@@ -102,7 +100,6 @@ header {
   color: #333;
 }
 
-/* Carrossel */
 .carousel-container {
   max-width: 1200px;
   margin: 15px auto;
@@ -131,7 +128,6 @@ header {
   display: block;
 }
 
-/* Botões de Próximo e Anterior */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -165,7 +161,6 @@ header {
   border-radius: 50px 0 0 50px;
 }
 
-/* Bolinhas de Indicação */
 .carousel-dots {
   position: absolute;
   bottom: 15px;
@@ -189,7 +184,6 @@ header {
   transform: scale(1.2);
 }
 
-/* Grid Principal e Cards de Produtos */
 .main-container {
   max-width: 1200px;
   margin: 20px auto;
@@ -276,7 +270,6 @@ header {
   background-color: #2968c8;
 }
 
-/* Modais Gerais (Fundo Escuro) */
 .modal {
   display: none;
   position: fixed;
@@ -365,7 +358,6 @@ header {
   margin-top: 10px;
 }
 
-/* Modal Detalhes do Produto - Estilo Mercado Livre */
 #productModal .ml-detail-card {
   background: #fff;
   border-radius: 8px;
@@ -404,7 +396,6 @@ header {
   }
 }
 
-/* Galeria de Fotos */
 .ml-gallery-container {
   display: flex;
   gap: 15px;
@@ -445,7 +436,6 @@ header {
   object-fit: contain;
 }
 
-/* Informações e Compra */
 .ml-condition {
   font-size: 12px;
   color: rgba(0,0,0,.55);
@@ -530,7 +520,6 @@ header {
   margin: 20px 0;
 }
 
-/* Botões Estilo Mercado Livre */
 .ml-actions {
   display: flex;
   flex-direction: column;
@@ -575,7 +564,6 @@ header {
   margin-top: 15px;
 }
 
-/* Descrição e Especificações */
 .ml-extra-info {
   margin-top: 30px;
 }
@@ -603,7 +591,6 @@ header {
   line-height: 1.6;
 }
 
-/* ESTILOS DO CARRINHO (ESTILO MERCADO LIVRE) */
 .ml-cart-overlay {
   position: fixed;
   top: 0;
@@ -665,7 +652,6 @@ header {
   min-width: 280px;
 }
 
-/* Item do Carrinho */
 .ml-cart-item {
   background: #fff;
   border-radius: 6px;
@@ -700,7 +686,6 @@ header {
   font-weight: 600;
 }
 
-/* Controladores de Quantidade */
 .ml-cart-actions {
   display: flex;
   align-items: center;
@@ -755,7 +740,6 @@ header {
   text-align: right;
 }
 
-/* Resumo da Compra */
 .ml-summary-card {
   background: #fff;
   border-radius: 6px;
@@ -795,7 +779,6 @@ header {
   color: #333;
 }
 
-/* ESTILOS DA ABA DE PAGAMENTO / CHECKOUT */
 #checkoutPage input[type="text"],
 #checkoutPage select {
   font-size: 14px;
