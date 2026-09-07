@@ -24,7 +24,6 @@ const products = [
 let cart = [];
 let shippingCost = 0;
 
-/* LÓGICA DO CARROSSEL */
 let currentSlide = 0;
 const totalSlides = 3;
 let autoSlideInterval;
@@ -76,7 +75,6 @@ function resetAutoSlide() {
   startAutoSlide();
 }
 
-/* RENDERIZAÇÃO DA PÁGINA PRINCIPAL */
 function renderProducts(items) {
   const grid = document.getElementById('productGrid');
   if (!grid) return;
@@ -106,7 +104,6 @@ function renderProducts(items) {
   });
 }
 
-/* MODAL DE PRODUTO COMPLETO */
 function openProductModal(productId) {
   const product = products.find(p => p.id === productId);
   if (!product) return;
@@ -133,7 +130,6 @@ function openProductModal(productId) {
   const installmentValue = (product.price / 10).toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
   if (instEl) instEl.innerHTML = `ou em 10x de <strong>R$ ${installmentValue}</strong> sem juros`;
 
-  // Miniaturas (Thumbnails)
   const thumbContainer = document.getElementById('detailThumbnails');
   if (thumbContainer) {
     thumbContainer.innerHTML = '';
@@ -164,13 +160,11 @@ function openProductModal(productId) {
     });
   }
 
-  // Descrição e Especificações
   const descEl = document.getElementById('detailDescription');
   const specsEl = document.getElementById('detailSpecsText');
   if (descEl) descEl.innerText = product.desc;
   if (specsEl) specsEl.innerText = product.specs;
 
-  // Ações dos Botões
   const buyBtn = document.getElementById('detailBuyBtn');
   const buyNowBtn = document.getElementById('detailBuyNowBtn');
 
@@ -189,7 +183,6 @@ function openProductModal(productId) {
     };
   }
 
-  // Exibe o Modal
   const modal = document.getElementById('productModal');
   if (modal) {
     modal.style.display = 'flex';
@@ -204,7 +197,6 @@ function filterProducts() {
   renderProducts(filtered);
 }
 
-/* GERENCIAMENTO DO CARRINHO */
 function addToCart(productId) {
   const product = products.find(p => p.id === productId);
   if (!product) return;
@@ -304,7 +296,6 @@ function openCart() {
   if (cartModal) cartModal.style.display = 'flex';
 }
 
-/* TRANSIÇÃO E LÓGICA DO CHECKOUT SPA */
 function proceedToCheckout() {
   if (cart.length === 0) {
     alert("Adicione pelo menos um produto ao carrinho antes de continuar!");
@@ -366,7 +357,6 @@ function populateInstallments(totalAmount) {
   }
 }
 
-/* BUSCA AUTOMÁTICA DE CEP NO CHECKOUT */
 async function autofillAddressByCep(cepValue) {
   const cleanCep = cepValue.replace(/\D/g, '');
 
@@ -390,8 +380,6 @@ async function autofillAddressByCep(cepValue) {
   }
 }
 
-/* FINALIZAÇÃO DO PAGAMENTO E VALIDAÇÃO DE ENDEREÇO */
-/* FINALIZAÇÃO DO PAGAMENTO E VALIDAÇÃO DE ENDEREÇO */
 function processPayment() {
   const cep = document.getElementById('checkoutCep');
   const rua = document.getElementById('checkoutStreet');
@@ -405,13 +393,11 @@ function processPayment() {
   const selectedPayment = document.querySelector('input[name="paymentOption"]:checked');
   const paymentMethod = selectedPayment ? selectedPayment.value.toLowerCase() : 'pix';
 
-  // Se o pagamento for via cartão de crédito
   if (paymentMethod === 'card' || paymentMethod === 'cartao') {
     alert('Dados do cartão incorretos, tente novamente.');
     return;
   }
 
-  // Sucesso para outros métodos (ex: PIX)
   alert(`Pedido realizado com sucesso!\nForma de pagamento: ${paymentMethod.toUpperCase()}`);
   
   cart = [];
@@ -424,7 +410,6 @@ function togglePaymentMethod(method) {
   document.getElementById('cardDetails').style.display = method === 'card' ? 'flex' : 'none';
 }
 
-/* MODAIS E BUSCA GERAL DE CEP */
 function openCepModal() {
   document.getElementById('cepModal').style.display = 'flex';
 }
@@ -481,7 +466,6 @@ async function searchCep() {
   }
 }
 
-/* INICIALIZAÇÃO */
 document.addEventListener('DOMContentLoaded', () => {
   renderProducts(products);
   startAutoSlide();
