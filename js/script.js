@@ -97,7 +97,7 @@ function renderProducts(items) {
             </div>
 
             <div class="installments" style="font-size: 12px; color: #333; margin-top: 3px;">
-               <p style="color: #00a650;">10x de <strong>R$ ${installmentValue}</strong> sem juros</p><br><img src="../img/Smart Tv 43'' Philco Full Hd Roku Tv Hdr10 Dolby P43cra _ Parcelamento sem juros - Google Chrome 05_09_2026 19_04_21.png" style="height: 15px;">
+               <p style="color: #00a650;">10x de <strong>R$ ${installmentValue}</strong> sem juros</p><br><img src="./img/Smart Tv 43'' Philco Full Hd Roku Tv Hdr10 Dolby P43cra _ Parcelamento sem juros - Google Chrome 05_09_2026 19_04_21.png" style="height: 15px;">
             </div>
           </div>
         </div>
